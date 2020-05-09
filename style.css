@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    background: url(https://res.cloudinary.com/abdraqeeb/image/upload/v1588921040/olav-ahrens-rotne-jvBXiynINGE-unsplash_1_xmyiw0.jpg) no-repeat center;
+    background-size: cover;
+    height: 650px;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.quiz-container {
+    max-width: 700px;
+    min-height: 500px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.question-number,
+.question,
+.options,
+.button,
+.scoreCard {
+
+}
+
+.question-number h3{
+    color: #8787e0;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.question {
+    font-size: 22px;
+    color: 000000;
+    padding: 20px 0px;
+}
+
+.options div{
+    background-color: #ccc;
+    font-size: 16px;
+    color: 000000;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.options div.disabled {
+    pointer-events: none;
+}
+
+.options div.correct {
+    z-index: 1;
+    color: white;
+}
+
+.options div.correct::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    z-index: -1;
+    animation: animateBackground 1s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateBackground {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.options div.wrong {
+    z-index: 1;
+    color: white;
+}
+
+.options div.wrong::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    z-index: -1;
+    animation: animateBackground 1s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateBackground {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.button .btn {
+    padding: 15px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #13f3d4;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    display: inline-block;
+    margin: 15px 0;
+    outline: none;
+}
+
+
+ .score-card {
+    width: 100%;
+    float: left;
+    border-top: 1px solid #ccc;
+}
+ .score-card {
+     width: 60%;
+    font-size: 20px;
+    color: black;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+ .score-card span {
+     width: 40%;
+    background-color: #20d820;
+    padding: 5px 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+
