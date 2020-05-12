@@ -108,7 +108,7 @@ body {
     .quiz-container {
         width: 60%;
         height: 100%;
-        background-color: green;
+        background-color: maroon;
         margin: 15px auto;
         border-radius: 10px;
         padding: 30px;
@@ -133,7 +133,7 @@ body {
     }
    .button .btn {
         width: 5%;
-        padding: 10px 30px;
+        padding: 20px 60px!important;
         cursor: pointer;
         background-color: #F33A24!important;
         font-size: 15px!important;
