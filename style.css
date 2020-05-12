@@ -10,8 +10,10 @@ body {
     box-sizing: border-box;
 }
 
+
+
 .quiz-container {
-    max-width: 700px;
+    max-width: 50%;
     min-height: 500px;
     background-color: #ffffff;
     margin: 30px auto;
@@ -19,13 +21,148 @@ body {
     padding: 30px;
 }
 
-.question-number,
-.question,
-.options,
-.button,
-.scoreCard {
+/*if screen width is less than 991px*/
+@media (max-width: 991px) {
+    .quiz-container {
+        width: 60%;
+        background-color: #cccccc;
+        margin: 30px auto;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .question {
+        font-size: 15px;
+        color: #000000;
+        padding: 10px 0;
+    }
+
+    .options div {
+        background-color: #FFD526!important;
+        color: black!important;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+/*if screen width is less than 767px*/
+@media (max-width: 767px) {
+    .quiz-container {
+        width: 60%;
+        height: 90%;
+        background-color: pink;
+        margin: 30px auto;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .question {
+        font-size: 15px;
+        color: #000000;
+        padding: 10px 0;
+    }
+    .question-number h3 {
+        color: white;
+    }
+    .options div {
+        background-color: #ffffff!important;
+        color: black!important;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+    .button .btn {
+        width: 20%;
+        padding: 15px 50px;
+        cursor: pointer;
+        background-color: #49F325!important;
+        font-size: 16px;
+        color: #ffffff;
+        border: none;
+        display: inline-block;
+        margin: 15px 0;
+        outline: none;
+    }
+    .score-card {
+        width: 100%;
+        border-top: 1px solid #000000!important;
+        height: 100%;
+        color: black!important;
+        float: left;
+    }
+    .score-card span {
+        width: 100%!important;
+        float: left;
+        background-color: #ffffff!important;
+        padding: 5px 20px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        color: #000000!important;
+        text-align: center;
+    }
+
+}@media (max-width: 480px) {
+    .quiz-container {
+        width: 60%;
+        height: 100%;
+        background-color: green;
+        margin: 15px auto;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .question {
+        font-size: 15px;
+        color: #000000;
+        padding: 10px 0;
+    }
+    .question-number h3 {
+        color: wheat!important;
+    }
+    .options div {
+        background-color: #ffffff;
+        color: black;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 3px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+   .button .btn {
+        width: 5%;
+        padding: 10px 30px;
+        cursor: pointer;
+        background-color: #F33A24!important;
+        font-size: 15px!important;
+        color: #ffffff;
+        border: none;
+        display: inline-block;
+        margin: 10px 0;
+        outline: none;
+    }
+    .score-card {
+        width: 100%;
+        border-top: 1px solid #ccc;
+        height: 100%;
+        color: wheat!important;
+        float: left;
+    }
+    .score-card span {
+        width: 100%!important;
+        float: left;
+        background-color: #ffffff!important;
+        padding: 5px 20px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        color: #000000!important;
+        text-align: center;
+    }
 
 }
+
 
 .question-number h3{
     color: #8787e0;
@@ -36,14 +173,14 @@ body {
 
 .question {
     font-size: 22px;
-    color: 000000;
-    padding: 20px 0px;
+    color: #000000;
+    padding: 20px 0;
 }
 
 .options div{
     background-color: #ccc;
     font-size: 16px;
-    color: 000000;
+    color: #000000;
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 15px;
